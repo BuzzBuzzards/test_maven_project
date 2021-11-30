@@ -12,6 +12,7 @@
         <!-- Test name -->
         <performancetest.script>test.jmx</performancetest.script>
         <name.test>testForJenkins</name.test>
+        <dir>${name.test}-${maven.build.timestamp}</dir>
         <test.url>blazedemo.com</test.url>
         <test.port>443</test.port>
         <test.protocol>https</test.protocol>
@@ -86,6 +87,7 @@
                         <artifact>kg.apc:jmeter-plugins-perfmon:2.0</artifact>
                     </jmeterExtensions>
                     <!-- The plugin uses some broken dependencies. An alternative is to set this to true and use excludedArtifacts, see below  -->
+                    <testResultsTimestamp>false</testResultsTimestamp>
                     <downloadExtensionDependencies>false</downloadExtensionDependencies>
                     <resultsDirectory>${project.build.directory}/jmeter/results/</resultsDirectory>
                     <reportDirectory>${project.build.directory}/jmeter/reports/</reportDirectory>
