@@ -10,13 +10,16 @@
     <!-- Properties -->
     <properties>
         <!-- Test name -->
-        <performancetest.script>loadScript.jmx</performancetest.script>
+        <performancetest.script>test.jmx</performancetest.script>
         <name.test>testForJenkins</name.test>
     </properties>
     <profiles>
     <profile>
         <id>example</id>
         <properties>
+            <url>blazedemo.com</url>
+            <port>443</port>
+            <protocol>https</protocol>
             <users>2</users>
             <rampup>1</rampup>
             <duration>300</duration>
@@ -69,9 +72,9 @@
                     </propertiesJMeter>
                     <!--User Properties-->
                     <propertiesUser>
-                        <url>${test.url}</url>
-                        <protocol>${test.protocol}</protocol>
-                        <port>${test.port}</port>
+                        <url>${url}</url>
+                        <protocol>${protocol}</protocol>
+                        <port>${port}</port>
                         <users>${users}</users>
                         <rampup>${rampup}</rampup>
                         <duration>${duration}</duration>
