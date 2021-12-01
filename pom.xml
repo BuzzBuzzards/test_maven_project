@@ -10,12 +10,8 @@
     <!-- Properties -->
     <properties>
         <!-- Test name -->
-        <performancetest.script>test.jmx</performancetest.script>
+        <performancetest.script>loadScript.jmx</performancetest.script>
         <name.test>testForJenkins</name.test>
-        <dir>${name.test}-${maven.build.timestamp}</dir>
-        <test.url>blazedemo.com</test.url>
-        <test.port>443</test.port>
-        <test.protocol>https</test.protocol>
     </properties>
     <profiles>
     <profile>
